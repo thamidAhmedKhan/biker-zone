@@ -15,6 +15,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
+    <!-- custom tailwind config css -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'c-primary': '#E76F51',
+                        'c-bg-primary': 'rgba(231, 111, 81, 0.10)',
+                        't-bg': 'background-color: rgba(0, 0, 0, 0.8);',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- custom styles -->
     <style>
         .font-poppins {
             font-family: "Poppins", sans-serif;
@@ -23,7 +40,8 @@
 </head>
 
 <body class="font-poppins">
-    <header>
+    <header class="">
+        <!-- nav bar -->
         <nav>
             <div class="navbar bg-base-100">
                 <div class="flex-1">
@@ -43,7 +61,7 @@
                             <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-4xl">Biker Zone</a>
+                    <a class="btn btn-ghost text-xl md:text-4xl">Biker Zone</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-6 text-base">
@@ -54,14 +72,82 @@
                     </ul>
                 </div>
                 <div class="text-base">
-                    <a class="btn bt px-8 py-2 rounded bg-[#E76F51] text-[#fff]">Login</a>
+                    <a class="btn bt px-4 md:px-8 py-0 md:py-2 rounded bg-c-primary text-[#fff]">Login</a>
                 </div>
             </div>
         </nav>
+        <!-- hero carous -->
+        <div class="carousel w-full">
+            <!-- slide-01 -->
+            <div id="slide1" class="carousel-item relative bg-c-bg-primary w-full rounded-xl">
+                <div class="hero_banner flex flex-col lg:flex-row justify-center items-center p-14  gap-12 lg:p-28">
+                    <div class="h_b_content flex-1 mx-auto space-y-4 flex flex-col items-center md:items-start ">
+                        <div class="h_b_headline text-4xl lg:text-6xl font-bold text-center lg:text-start">Ride-on R15 V4 with Smile</div>
+                        <div class="h_b_description text-t-bg text-center lg:text-start">Amet minim mollit non deserunt ullamco 
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</div>
+                        <div class="h_b_btn"><button class="btn bt px-4 md:px-8 py-0 md:py-2 rounded bg-c-primary text-[#fff]">Purchase</button></div>
+                    </div>
+                    <div class="hero_carousel_img flex flex-1"><img src="Assets/images/slider/bike1.png" alt="Carousel-image"></div>
+                </div>
+                <div class="absolute md:left-5 left-2 md:right-5 right-2 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide4" class="btn bg-transparent border-0 shadow-none">❮</a>
+                    <a href="#slide2" class="btn bg-transparent border-0 shadow-none">❯</a>
+                </div>
+            </div>
+            <!-- slide-02 -->
+            <div id="slide2" class="carousel-item relative bg-c-bg-primary w-full rounded-xl">
+                <div class="hero_banner flex flex-col lg:flex-row justify-center items-center p-14  gap-12 lg:p-28">
+                    <div class="h_b_content flex-1 mx-auto space-y-4 flex flex-col items-center md:items-start ">
+                        <div class="h_b_headline text-4xl lg:text-6xl font-bold text-center lg:text-start">Ride-on R15 V4 with Smile</div>
+                        <div class="h_b_description text-t-bg text-center lg:text-start">Amet minim mollit non deserunt ullamco 
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</div>
+                        <div class="h_b_btn"><button class="btn bt px-4 md:px-8 py-0 md:py-2 rounded bg-c-primary text-[#fff]">Purchase</button></div>
+                    </div>
+                    <div class="hero_carousel_img flex flex-1"><img src="Assets/images/slider/bike2.png" alt="Carousel-image"></div>
+                </div>
+                <div class="absolute md:left-5 left-2 md:right-5 right-2 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide1" class="btn bg-transparent border-0 shadow-none">❮</a>
+                    <a href="#slide3" class="btn bg-transparent border-0 shadow-none">❯</a>
+                </div>
+            </div>
+            <!-- slide-03 -->
+            <div id="slide3" class="carousel-item relative bg-c-bg-primary w-full rounded-xl">
+                <div class="hero_banner flex flex-col lg:flex-row justify-center items-center p-14  gap-12 lg:p-28">
+                    <div class="h_b_content flex-1 mx-auto space-y-4 flex flex-col items-center md:items-start ">
+                        <div class="h_b_headline text-4xl lg:text-6xl font-bold text-center lg:text-start">Ride-on R15 V4 with Smile</div>
+                        <div class="h_b_description text-t-bg text-center lg:text-start">Amet minim mollit non deserunt ullamco 
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</div>
+                        <div class="h_b_btn"><button class="btn bt px-4 md:px-8 py-0 md:py-2 rounded bg-c-primary text-[#fff]">Purchase</button></div>
+                    </div>
+                    <div class="hero_carousel_img flex flex-1"><img src="Assets/images/slider/bike3.png" alt="Carousel-image"></div>
+                </div>
+                <div class="absolute md:left-5 left-2 md:right-5 right-2 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide2" class="btn bg-transparent border-0 shadow-none">❮</a>
+                    <a href="#slide4" class="btn bg-transparent border-0 shadow-none">❯</a>
+                </div>
+            </div>
+            <!-- slide-04 -->
+            <div id="slide4" class="carousel-item relative bg-c-bg-primary w-full rounded-xl">
+                <div class="hero_banner flex flex-col lg:flex-row justify-center items-center p-14  gap-12 lg:p-28">
+                    <div class="h_b_content flex-1 mx-auto space-y-4 flex flex-col items-center md:items-start ">
+                        <div class="h_b_headline text-4xl lg:text-6xl font-bold text-center lg:text-start">Ride-on R15 V4 with Smile</div>
+                        <div class="h_b_description text-t-bg text-center lg:text-start">Amet minim mollit non deserunt ullamco 
+                            est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</div>
+                        <div class="h_b_btn"><button class="btn bt px-4 md:px-8 py-0 md:py-2 rounded bg-c-primary text-[#fff]">Purchase</button></div>
+                    </div>
+                    <div class="hero_carousel_img flex flex-1"><img src="Assets/images/slider/bike4.png" alt="Carousel-image"></div>
+                </div>
+                <div class="absolute md:left-5 left-2 md:right-5 right-2 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide3" class="btn bg-transparent border-0 shadow-none">❮</a>
+                    <a href="#slide1" class="btn bg-transparent border-0 shadow-none">❯</a>
+                </div>
+            </div>
+
+        </div>
     </header>
     <main>
 
-    </main>
+    </main class="md:container md:mx-auto">
     <footer>
 
     </footer>
